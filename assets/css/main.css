@@ -2183,6 +2183,56 @@ section,
   color: #e5c592;
 }
 
+
+
+/* POPUP STYLING */
+.popup {
+  z-index: 99999;
+  background-color: rebeccapurple;
+  color: #fff;
+  width: 90%;
+  height: 80%;
+  border-radius: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow-y: scroll;
+  margin-top: 50px;
+  visibility: visible;
+}
+.open-popup {
+  visibility: visible;
+}
+
+.popup i {
+  font-size: 3em;
+  color: #000;
+  float: right;
+  cursor: pointer;
+}
+
+.popup-hd{
+  width: 100%;
+  background-color: red;
+  height: 160px;
+}
+
+/* Style for Webkit-based browsers */
+.popup::-webkit-scrollbar {
+  width: 10px;
+  background-color: var(--new-color); 
+  border-radius: 20px;
+} 
+
+.popup::-webkit-scrollbar-thumb {
+  background-color: green;
+  height: 20px;
+}
+
+/* END OF POPUP STYLE */
+
+
 /* RESPONSIVENESS BY FLAMEZ*/
 @media (max-width: 390px){
   .header {
@@ -2197,6 +2247,7 @@ section,
     font-size: 2em;
     height: 350px;
     background-size: 400px;
+    margin-bottom: -60px;
   }
   #cnt-cnt{
     font-size: 2em;
@@ -2252,6 +2303,7 @@ section,
     font-size: 2em;
     height: 350px;
     background-size: 400px;
+    margin-bottom: -60px;
   }
   #cnt-cnt{
     font-size: 2em;
@@ -2306,6 +2358,7 @@ section,
     font-size: 2em;
     height: 350px;
     background-size: 400px;
+    margin-bottom: -60px;
   }
   #cnt-cnt{
     font-size: 2em;
@@ -2360,6 +2413,7 @@ section,
     font-size: 2em;
     height: 350px;
     background-size: 400px;
+    margin-bottom: -60px;
   }
   #cnt-cnt{
     font-size: 2em;
