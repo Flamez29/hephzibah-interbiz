@@ -23,6 +23,8 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <!-- BOXICON CSS File -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
 
@@ -65,6 +67,26 @@
       <p class="abt-p">Blog</p>
     </div>
 
+      <!--POPUP SECTION-->
+      <div class="popup" id="popup">
+        <i class='bx bxs-tag-x' onclick="closePopup()"></i>
+        <div class="popup-hd">
+          <p>Possimus soluta ut id suscipit ea ut. In quo quia et soluta libero sit sint.</p>
+          <span> <time datetime="2024-01-01">Jan 1, 2024</time></span>
+        </div>
+        <div class="popup-rd">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos repudiandae maxime perspiciatis nulla repellendus ab a nesciunt, deleniti reprehenderit, animi ad veritatis numquam molestiae maiores architecto quaerat laboriosam excepturi dolore!</p> 
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse voluptates architecto id inventore nobis minus ex ipsam magni amet doloribus iste aliquam deleniti maiores nemo sunt est consectetur, ad repellat!</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos repudiandae maxime perspiciatis nulla repellendus ab a nesciunt, deleniti reprehenderit, animi ad veritatis numquam molestiae maiores architecto quaerat laboriosam excepturi dolore!</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse voluptates architecto id inventore nobis minus ex ipsam magni amet doloribus iste aliquam deleniti maiores nemo sunt est consectetur, ad repellat!</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos repudiandae maxime perspiciatis nulla repellendus ab a nesciunt, deleniti reprehenderit, animi ad veritatis numquam molestiae maiores architecto quaerat laboriosam excepturi doloref!</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse voluptates architecto id inventore nobis minus ex ipsam magni amet doloribus iste aliquam deleniti maiores nemo sunt est consectetur, ad repellat!</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos repudiandae maxime perspiciatis nulla repellendus ab a nesciunt, deleniti reprehenderit, animi ad veritatis numquam molestiae maiores architecto quaerat laboriosam excepturi dolore!</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse voluptates architecto id inventore nobis minus ex ipsam magni amet doloribus iste aliquam deleniti maiores nemo sunt est consectetur, ad repellat!</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos repudiandae maxime perspiciatis nulla repellendus ab a nesciunt, deleniti reprehenderit, animi ad veritatis numquam molestiae maiores architecto quaerat laboriosam excepturi dolore!</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse voluptates architecto id inventore nobis minus ex ipsam magni amet doloribus iste aliquam deleniti maiores nemo sunt est consectetur, ad repellat!</p>
+        </div>
+        <span class="popup-dt"></span>
+      </div>
+      <!--END OF POPUP SECTION-->
+
     <!-- Page Title -->
     <div class="container">
       <div class="row">
@@ -74,7 +96,7 @@
           <!-- Blog Posts Section -->
           <section id="blog-posts" class="blog-posts section">
 
-            <div class="container">
+            <div class="container"> 
               <div class="row gy-4">
 
                 
@@ -100,9 +122,10 @@
 
                       <hr>
 
-                      <a href="blog-details.html" id="blg-id" class="readmore stretched-link"><span>Read More</span><i id="blg-id" class="bi bi-arrow-right"></i></a>
+                      <a class="readmore stretched-link" onclick="openPopup()"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
 
                     </div>
+                  
 
                   </article>
                 </div><!-- End post list item -->
@@ -125,7 +148,7 @@
 
                       <hr>
 
-                      <a href="blog-details.html" id="blg-id" class="readmore stretched-link"><span>Read More</span><i id="blg-id" class="bi bi-arrow-right"></i></a>
+                      <a href="#popup" class="readmore stretched-link" onclick="openPopup()"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
 
                     </div>
 
@@ -151,7 +174,7 @@
 
                       <hr>
 
-                      <a href="blog-details.html" id="blg-id" class="readmore stretched-link"><span>Read More</span><i id="blg-id" class="bi bi-arrow-right"></i></a>
+                      <a class="readmore stretched-link" onclick="openPopup()"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
 
                     </div>
 
@@ -178,7 +201,7 @@
 
                       <hr>
 
-                      <a href="blog-details.html" id="blg-id" class="readmore stretched-link"><span>Read More</span><i id="blg-id" class="bi bi-arrow-right"></i></a>
+                      <a class="readmore stretched-link" onclick="openPopup()"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
 
                     </div>
 
@@ -236,7 +259,7 @@
               <div class="post-item">
                 <img src="assets/img/blog/blog-recent-1.jpg" alt="" class="flex-shrink-0">
                 <div>
-                  <h4><a href="blog-details.html">Nihil blanditiis at in nihil autem</a></h4>
+                  <h4><a href="">Nihil blanditiis at in nihil autem</a></h4>
                   <time datetime="2024-01-01">Jan 1, 2024</time>
                 </div>
               </div><!-- End recent post item-->
@@ -244,7 +267,7 @@
               <div class="post-item">
                 <img src="assets/img/blog/blog-recent-2.jpg" alt="" class="flex-shrink-0">
                 <div>
-                  <h4><a href="blog-details.html">Quidem autem et impedit</a></h4>
+                  <h4><a>Quidem autem et impedit</a></h4>
                   <time datetime="2024-01-01">Jan 1, 2024</time>
                 </div>
               </div><!-- End recent post item-->
@@ -252,7 +275,7 @@
               <div class="post-item">
                 <img src="assets/img/blog/blog-recent-3.jpg" alt="" class="flex-shrink-0">
                 <div>
-                  <h4><a href="blog-details.html">Id quia et et ut maxime similique occaecati ut</a></h4>
+                  <h4><a>Id quia et et ut maxime similique occaecati ut</a></h4>
                   <time datetime="2024-01-01">Jan 1, 2024</time>
                 </div>
               </div><!-- End recent post item-->
@@ -260,7 +283,7 @@
               <div class="post-item">
                 <img src="assets/img/blog/blog-recent-4.jpg" alt="" class="flex-shrink-0">
                 <div>
-                  <h4><a href="blog-details.html">Laborum corporis quo dara net para</a></h4>
+                  <h4><a>Laborum corporis quo dara net para</a></h4>
                   <time datetime="2024-01-01">Jan 1, 2024</time>
                 </div>
               </div><!-- End recent post item-->
@@ -268,7 +291,7 @@
               <div class="post-item">
                 <img src="assets/img/blog/blog-recent-5.jpg" alt="" class="flex-shrink-0">
                 <div>
-                  <h4><a href="blog-details.html">Et dolores corrupti quae illo quod dolor</a></h4>
+                  <h4><a>Et dolores corrupti quae illo quod dolor</a></h4>
                   <time datetime="2024-01-01">Jan 1, 2024</time>
                 </div>
               </div><!-- End recent post item-->
@@ -357,6 +380,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/popup.js"></script>
 
 </body>
 
