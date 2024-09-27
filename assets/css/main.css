@@ -2030,10 +2030,12 @@ section,
 .recent-posts-widget .post-item h4 a {
   color: var(--new-color);
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .recent-posts-widget .post-item h4 a:hover {
-  color: black;
+  color: #e5c592;
+  cursor: pointer;
 }
 
 .recent-posts-widget .post-item time {
