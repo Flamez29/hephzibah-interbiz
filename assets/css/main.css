@@ -78,7 +78,7 @@ h6 {
 
 /* PHP Email Form Messages
 ------------------------------*/
-.php-email-form .error-message {
+/*.php-email-form .error-message {
   display: none;
   background: #df1529;
   color: #ffffff;
@@ -116,7 +116,7 @@ h6 {
   border: 3px solid var(--accent-color);
   border-top-color: var(--surface-color);
   animation: php-email-form-loading 1s linear infinite;
-}
+}*/
 
 @keyframes php-email-form-loading {
   0% {
@@ -2189,41 +2189,58 @@ section,
 
 /* POPUP STYLING */
 .popup {
-  z-index: 99999;
+  z-index: 999;
   background-color: #fff;
-  width: 90%;
+  width: 85%;
   height: 80%;
   border-radius: 10px;
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  overflow-y: scroll;
+  overflow-y: auto;
   margin-top: 50px;
   visibility: hidden;
   border: 1px solid var(--new-color);
   box-shadow: 0 8px 8px rgba(0, 0, 0, 10);
   display: flex;
   flex-direction: column;
+  transition: transform 0.4s, top 0.4s;
+  transform: translate(-50%, -50%) scale(0.1);
 }
 .open-popup {
   visibility: visible;
+  transform: translate(-50%, -50%) scale(1)
 }
 
 /*WORK MORE ON THE POPUP */
 #popup-icon-1 {
+  position: sticky;
   font-size: 3em;
   color: var(--new-color);
   cursor: pointer;
-  margin-left: 96%;
+  margin-left: 90%;
   z-index: 9999;
+}
+#popup-icon-1:hover {
+  color: #e5c592;
 }
 
 #popup-icon-2 { 
-  position: fixed;
+  position: sticky;
   bottom: 20px;
-  right: 20px;
+  left: 91%;
+  height: 70px;
+  width: 70px;
+  z-index: 99999;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
   font-size: 3em;
+  background-color: greenyellow;
+  cursor: pointer;
+}
+#popup-icon-2.show {
+  visibility: visible;
 }
 
 .popup-hd{
@@ -2254,7 +2271,7 @@ section,
   text-align: center;
   color: var(--new-color);
   font-size: 12px;
-  width: 8%;
+  width: 10%;
   font-style: italic;
   height: 20px;
   background-color: rgba(0, 0, 0, 0.2); /* Increased alpha value for darker background */
@@ -2266,8 +2283,8 @@ section,
   height: 100%;
   background-color: transparent;
   margin: auto;
-  text-align: left;
   text-wrap: wrap;
+  text-align: left;
 }
 .popup-rd p {
   color: #000;
@@ -2352,6 +2369,333 @@ section,
 }
 
 /* END OF POPUP STYLE */
+
+
+/* POPUP RESPONSIVENESS BY FLAMEZ */
+@media (min-width: 768px) {
+  .popup-hd p {
+    font-size: 1.1em;
+  }
+
+  .popup-hd span {
+    width: 15%;
+    margin-top: 8px;
+  }
+  
+  #popup-icon-1 {
+    margin-left: 92%;
+  }
+}
+
+@media (max-width: 430px) {
+  .popup {
+    height: 72%;
+
+  }
+  .popup-hd p {
+    font-size: 12px;
+    max-width: 80%;
+  }
+
+  .popup-hd span {
+    margin-top: 8px;
+    width: 26%;
+  }
+
+  #popup-icon-1 {
+    margin-left: 91%;
+    font-size: 2em;
+  }
+
+  .popup-img {
+    width: 92%;
+    height: 35%;
+    margin-top: 152px;
+  }
+
+  .popup-rd {
+    width: 82%;
+    font-size: 12px;
+    height: 50%;
+    letter-spacing: 1px;
+  }
+
+  .other-img {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .other-img img {
+    width: 48%;
+  }
+
+  .popup-ft {
+    height: 5%;
+    width: 84%;
+    position: fixed;
+    margin-top: 20%;
+    font-size: 11px;
+  }
+}
+
+
+@media (max-width: 414px) {
+  .popup {
+    height: 72%;
+
+  }
+  .popup-hd p {
+    font-size: 12px;
+    max-width: 80%;
+  }
+
+  .popup-hd span {
+    margin-top: 8px;
+    width: 26%;
+  }
+
+  #popup-icon-1 {
+    margin-left: 91%;
+    font-size: 2em;
+  }
+
+  .popup-img {
+    width: 92%;
+    height: 35%;
+    margin-top: 152px;
+  }
+
+  .popup-rd {
+    width: 82%;
+    font-size: 12px;
+    height: 50%;
+    letter-spacing: 1px;
+  }
+
+  .other-img {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .other-img img {
+    width: 48%;
+  }
+
+  .popup-ft {
+    height: 5%;
+    width: 84%;
+    position: fixed;
+    margin-top: 20%;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 412px) {
+  .popup {
+    height: 72%;
+
+  }
+  .popup-hd p {
+    font-size: 12px;
+    max-width: 80%;
+  }
+
+  .popup-hd span {
+    margin-top: 8px;
+    width: 26%;
+  }
+
+  #popup-icon-1 {
+    margin-left: 91%;
+    font-size: 2em;
+  }
+
+  .popup-img {
+    width: 92%;
+    height: 35%;
+    margin-top: 152px;
+  }
+
+  .popup-rd {
+    width: 82%;
+    font-size: 12px;
+    height: 50%;
+    letter-spacing: 1px;
+  }
+
+  .other-img {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .other-img img {
+    width: 48%;
+  }
+
+  .popup-ft {
+    height: 5%;
+    width: 84%;
+    position: fixed;
+    margin-top: 20%;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 390px) {
+  .popup {
+    height: 72%;
+
+  }
+  .popup-hd p {
+    font-size: 12px;
+    max-width: 80%;
+  }
+
+  .popup-hd span {
+    margin-top: 8px;
+    width: 26%;
+  }
+
+  #popup-icon-1 {
+    margin-left: 91%;
+    font-size: 2em;
+  }
+
+  .popup-img {
+    width: 92%;
+    height: 35%;
+    margin-top: 152px;
+  }
+
+  .popup-rd {
+    width: 82%;
+    font-size: 12px;
+    height: 50%;
+    letter-spacing: 1px;
+  }
+
+  .other-img {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .other-img img {
+    width: 48%;
+  }
+
+  .popup-ft {
+    height: 5%;
+    width: 84%;
+    position: fixed;
+    margin-top: 20%;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 375px) {
+  .popup {
+    height: 72%;
+
+  }
+  .popup-hd p {
+    font-size: 12px;
+    max-width: 80%;
+  }
+
+  .popup-hd span {
+    margin-top: 8px;
+    width: 26%;
+  }
+
+  #popup-icon-1 {
+    margin-left: 91%;
+    font-size: 2em;
+  }
+
+  .popup-img {
+    width: 92%;
+    height: 35%;
+    margin-top: 152px;
+  }
+
+  .popup-rd {
+    width: 82%;
+    font-size: 12px;
+    height: 50%;
+    letter-spacing: 1px;
+  }
+
+  .other-img {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .other-img img {
+    width: 48%;
+  }
+
+  .popup-ft {
+    height: 5%;
+    width: 84%;
+    position: fixed;
+    margin-top: 20%;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 360px) {
+  .popup {
+    height: 72%;
+
+  }
+  .popup-hd p {
+    font-size: 12px;
+    max-width: 80%;
+  }
+
+  .popup-hd span {
+    margin-top: 8px;
+    width: 26%;
+  }
+
+  #popup-icon-1 {
+    margin-left: 91%;
+    font-size: 2em;
+  }
+
+  .popup-img {
+    width: 92%;
+    height: 35%;
+    margin-top: 152px;
+  }
+
+  .popup-rd {
+    width: 82%;
+    font-size: 12px;
+    height: 50%;
+    letter-spacing: 1px;
+  }
+
+  .other-img {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .other-img img {
+    width: 48%;
+  }
+
+  .popup-ft {
+    height: 5%;
+    width: 84%;
+    position: fixed;
+    margin-top: 20%;
+    font-size: 11px;
+  }
+}
+
+
+/*END OF POPUP RESPONSIVENESS */
 
 
 /* RESPONSIVENESS BY FLAMEZ*/
