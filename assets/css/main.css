@@ -320,6 +320,7 @@ h6 {
     display: none;
     list-style: none;
     position: absolute;
+    height: 40%;
     inset: 60px 20px 20px 20px;
     padding: 10px 0;
     margin: 0;
@@ -1298,6 +1299,7 @@ section,
   width: 150px;
   border-radius: 50%;
   flex-shrink: 0;
+  box-shadow: 6px 8px 21px #e5c592;
 }
 
 .team .team-member .pic img {
@@ -2228,19 +2230,24 @@ section,
 #popup-icon-2 { 
   position: sticky;
   bottom: 20px;
-  left: 91%;
+  left: 95%;
   height: 70px;
-  width: 70px;
+  width: 50px;
   z-index: 99999;
   display: grid;
   place-items: center;
   border-radius: 50%;
-  font-size: 3em;
-  background-color: greenyellow;
+  font-size: 2em;
+  background-color: #e5c592;
   cursor: pointer;
 }
 #popup-icon-2.show {
   visibility: visible;
+}
+#popup-icon-2:hover {
+  color: #e5c592;
+  background-color: transparent;
+  border: 2px solid var(--new-color);
 }
 
 .popup-hd{
@@ -2486,7 +2493,7 @@ section,
     width: 84%;
     position: fixed;
     margin-top: 20%;
-    font-size: 11px;
+    font-size: 9px;
   }
 }
 
@@ -2537,7 +2544,7 @@ section,
     width: 84%;
     position: fixed;
     margin-top: 20%;
-    font-size: 11px;
+    font-size: 9px;
   }
 }
 
@@ -2588,7 +2595,7 @@ section,
     width: 84%;
     position: fixed;
     margin-top: 20%;
-    font-size: 11px;
+    font-size: 9px;
   }
 }
 
@@ -2639,7 +2646,7 @@ section,
     width: 84%;
     position: fixed;
     margin-top: 20%;
-    font-size: 11px;
+    font-size: 9px;
   }
 }
 
@@ -2659,8 +2666,15 @@ section,
   }
 
   #popup-icon-1 {
-    margin-left: 91%;
+    margin-left: 89%;
     font-size: 2em;
+  }
+
+  #popup-icon-2 {
+    height: 130px;
+    width: 40px;
+    font-size: 1.5em;
+    left: 86%;
   }
 
   .popup-img {
@@ -2677,20 +2691,21 @@ section,
   }
 
   .other-img {
-    flex-direction: row;
+    flex-direction: column;
     gap: 10px;
+    width: 70%;
   }
 
   .other-img img {
-    width: 48%;
+    width: 46%;
   }
 
   .popup-ft {
     height: 5%;
     width: 84%;
     position: fixed;
-    margin-top: 20%;
-    font-size: 11px;
+    margin-top: 2%;
+    font-size: 9px;
   }
 }
 
